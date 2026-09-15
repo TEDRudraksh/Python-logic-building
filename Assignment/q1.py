@@ -92,11 +92,15 @@ if carry == "yes":
     total_bill_afterdiscount = total_bill_afterdiscount + 10
     total_bill_Ap = total_bill_beforediscount + 10 + total_gst
     total_bill_dp = total_bill_beforediscount + 10 + total_gst
+    carry = 'yes'
+    number = 10.00
   
 else:
     total_bill_afterdiscount = total_bill_afterdiscount
     total_bill_Ap = total_bill_beforediscount + total_gst
     total_bill_dp = total_bill_beforediscount + total_gst
+    carry = 'no'
+    number = 0.00
 
 
 if customer_gender == "female":
@@ -106,9 +110,11 @@ else:
 
 
 print("\t\t\tDmart")
-print(f"Name : {customer_name}\tDate:15/09/26")
+print(f"Name : {customer_name}\t\t\tDate:15/09/26")
+print(f"Item Name\tQuantity\tPrice\tTotal\tAfter-Discount")
 print("------------------------------------------------------")
-print(f"{item1}\t\t{item1_quantity}\t\t{item1_price}\t{item1_totalprice}\t{item1_discount_price or item1_totalprice}")
+
+print(f"{item1}\t\t{item1_quantity}\t\t{item1_price}\t{item1_totalprice}\t{item1_discount_price if item1_quantity>4 else item1_totalprice}")
 print(f"{item2}\t\t{item2_quantity}\t\t{item2_price}\t{item2_totalprice}\t{item2_totalprice}")
 print(f"{item3}\t\t{item3_quantity}\t\t{item3_price}\t{item3_totalprice}\t{item3_totalprice}")
 print(f"{item4}\t\t{item4_quantity}\t\t{item4_price}\t{item4_totalprice}\t{item4_totalprice}")
@@ -119,13 +125,13 @@ print(f"{item8}\t\t{item8_quantity}\t\t{item8_price}\t{item8_totalprice}\t{item8
 print(f"{item9}\t\t{item9_quantity}\t\t{item9_price}\t{item9_totalprice}\t{item9_totalprice}")
 print(f"{item10}\t\t{item10_quantity}\t\t{item10_price}\t{item10_totalprice}\t{item10_discount_price}")
 print("------------------------------------------------------")
-print("\t\t\tA.P\tD.P")
+print("\t\t\t\t\tA.P\tD.P")
 print(f"Gift : {gift}\t\t\t0.00\t0.00")
 print("\n")
-print(f"carry bag : {carry}\t\t\t{print("10.00\t10.00")if carry=="yes"else print("0.00\t0.00")}")
-print(f"GST(10%)\t\t\t{total_gst}\t{total_gst}")
+print(f"carry bag : {carry}\t\t\t\t{print("10.00\t10.00") if carry=="yes"else print("0.00\t0.00")}")
+print(f"GST(10%)\t\t\t\t{round(total_gst,2)}\t{round(total_gst,2)}")
 print("------------------------------------------------------")
-print(f"\t\t\t\t{total_bill_Ap}\t{total_bill_dp}")
+print(f"\t\t\t\t\t{round(total_bill_Ap,2)}\t{round(total_bill_dp,2)}")
 print("\n")
 print("\t\t\tThank You")
 print("\t\t\tto visit")
