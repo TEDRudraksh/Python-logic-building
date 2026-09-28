@@ -1,12 +1,8 @@
-n=5
-s=0
-for i in range(1,6):
-
-    for j in range(n-i):
-        print(" ",end="")
-    for k in range(1,i+1):
-        s = s + 11*10
-        print(s,end="")
-
-
+for i in range(5):
+    for j in range(5,-1,-1):
+        if j>i:
+            print(" ",end="")
+        else:
+            if i==j:
+                print(11**i,end="")
     print()
