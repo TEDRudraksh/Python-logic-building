@@ -15,8 +15,13 @@ dict2 = {
     "d": 45,
     "f": 50
 }
-result = {}
-for key,value in dict1.items():
-    if key in dict2 and dict1[key] == dict2[key]:
-        result[key] = value
+
+result = set()
+
+for key1, value1 in dict1.items():
+    for key2, value2 in dict2.items():
+        if value1 == value2:
+            result.add(key1)
+            result.add(key2)
+
 print(result)
