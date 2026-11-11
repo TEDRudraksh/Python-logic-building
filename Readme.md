@@ -26,11 +26,14 @@ Whether you are a beginner or someone looking to improve your problem-solving sk
 This repository contains practice questions and assignments based on different Python concepts.
 
 No.| Topic| Description
+
+
 1| Python Basics| Variables, data types, input/output
 
 2| Conditional Statements| if, elif, else
 
 3| Loops| for and while loops
+
 4| Strings| String manipulation and operations
 
 5| Lists| List operations and problem-solving
