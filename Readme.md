@@ -27,13 +27,20 @@ This repository contains practice questions and assignments based on different P
 
 No.| Topic| Description
 1| Python Basics| Variables, data types, input/output
+
 2| Conditional Statements| if, elif, else
+
 3| Loops| for and while loops
 4| Strings| String manipulation and operations
+
 5| Lists| List operations and problem-solving
+
 6| Dictionaries| Key-value operations and applications
+
 7| Functions| User-defined functions and arguments
+
 8| Object-Oriented Programming| Classes, objects, inheritance, encapsulation
+
 
 More to come...
 
