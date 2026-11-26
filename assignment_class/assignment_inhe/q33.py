@@ -27,20 +27,20 @@ class Device(ABC):
 class SmartFan(Device):
 
     def __init__(self):
-        self.__on = False
+
         self.__off = True
 
     def turn_on(self):
         if self.__off:
             print("Fan put on")
-            self.__on = True
+    
             self.__off = False
             
         else:
             print("Fan is Already on")
 
     def turn_off(self):
-        if self.__on:
+        if not self.__off:
             print("Fan turn off")
             self.__off = True
 
@@ -51,20 +51,20 @@ class SmartFan(Device):
 class SmartLight(Device):
 
     def __init__(self):
-        self.__on = False
+
         self.__off = True
 
     def turn_on(self):
         if self.__off:
             print("Light put on")
-            self.__on = True
+ 
             self.__off = False
             
         else:
             print("Light is Already on")
 
     def turn_off(self):
-        if self.__on:
+        if not self.__off:
             print("Light turn off")
             self.__off = True
 
@@ -75,20 +75,20 @@ class SmartLight(Device):
 class SmartAC(Device):
 
     def __init__(self):
-        self.__on = False
+
         self.__off = True
 
     def turn_on(self):
         if self.__off:
             print("AC put on")
-            self.__on = True
+
             self.__off = False
             
         else:
             print("AC is Already on")
 
     def turn_off(self):
-        if self.__on:
+        if not self.__off:
             print("AC turn off")
             self.__off = True
 
